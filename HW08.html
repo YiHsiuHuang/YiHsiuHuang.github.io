@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="UTF-8">
+        <title>HW08</title>
+        <style media="screen">
+            body{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: sans-serif;
+                background-image: linear-gradient(140deg,rgb(241, 227, 165),rgb(203, 235, 248));
+            }
+            #div2{
+                background-color: rgba(252, 237, 237, 0.461);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 20px rgb(53, 53, 78);
+            }
+            h2{
+                font-size: 30px;
+                font-weight: 400;
+            }
+            .text{
+                text-align: left;
+                margin-left: 150px;
+            }
+            #h{
+                color: rgb(92, 50, 50);
+                text-align: left;
+                font-size: 20px;
+                font-weight: 200;
+                border:none;
+                background:none;
+                border-bottom: 1px solid rgb(42, 38, 33);
+                width: 200px;
+            }
+            #w{
+                color: rgb(92, 50, 50);
+                text-align: left;
+                font-size: 20px;
+                font-weight: 200;
+                border:none;
+                background:none;
+                border-bottom: 1px solid rgb(42, 38, 33);
+                width: 200px;
+            }
+            #result{
+                color: royalblue;
+            }
+            #btn{
+                font-family: inherit;
+                margin-top: 10px;
+                border:none;
+                color:rgb(34, 2, 2);
+                background-image: linear-gradient(140deg, rgb(241, 227, 165),rgb(203, 235, 248));
+                width: 150px;
+                padding: 10px;
+                border-radius: 30px;
+                outline: none;
+                cursor: pointer;
+            }
+            #btn:hover{
+                box-shadow:1px 1px 10px rgb(53, 53, 78) ;
+            }
+            #info{
+                font-size: 12px;
+                font-family: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            function BMI(){
+                var h=document.getElementById('h').value;
+                var w=document.getElementById('w').value;
+                var bmi=w/(h/100*h/100);
+                var bimo=(bmi.toFixed(2));
+
+                document.getElementById('result').innerHTML="你的ＢＭＩ是"+bimo;
+            }
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <br>
+                <div class="col-sm-4" id="div2">歡迎使用</div>
+                <br>
+                <div class="col-sm-8" id="div2">
+                    <h2>BMI 計算機<h2>
+                    <p class="text">Height</p>
+                    <input type="text" id="h">
+                    <p class="text">Weight</p>
+                    <input type="text" id="w">
+                    <p id="result"></p>
+                    <button id="btn" onclick="BMI()">Calaulate</button>
+                    <p id="info">身高請輸入（cm)</p>
+                    <p id="info">體重請輸入（kg)</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>
